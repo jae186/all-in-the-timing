@@ -40,15 +40,10 @@ public class try1 {
 	        	clip.start();
 	        	clip.loop(Clip.LOOP_CONTINUOUSLY);
 	        	
-	        	JOptionPane.showMessageDialog(null, "Hit ok to pause");
-	        	long clipTimePosition = clip.getMicrosecondLength();
-	        	clip.stop();
 	        	
-	        	JOptionPane.showConfirmDialog(null,"Hit ok to resume");
-	        	clip.setMicrosecondPosition(clipTimePosition);
-	        	clip.start();
 	        	
 	        	JOptionPane.showMessageDialog(null, "Press ok to stop playing");
+	        	clip.stop();
 	        }
 	        else
 	        {
