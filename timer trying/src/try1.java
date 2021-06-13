@@ -42,7 +42,7 @@ public class try1 {
 	        	clip.stop();
 	        }
 	        else
-	        {
+	        { 
 	        	System.out.println("Can't find file");
 
 	        }
