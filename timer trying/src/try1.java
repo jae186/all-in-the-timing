@@ -46,7 +46,7 @@ public class try1 {
 	        	System.out.println("Can't find file");
 
 	        }
-	    }
+	    } 
 		catch(Exception e) {
 			e.printStackTrace();
 		}
