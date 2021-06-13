@@ -8,7 +8,7 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JOptionPane;
 
-
+ 
 public class try1 {
 
 	public static void main(String[] args) {
@@ -20,18 +20,17 @@ public class try1 {
 	
 	public static void timer() {
 		long start = System.currentTimeMillis();
-		File f = new File("/Users/jayatigupta/Downloads/beepbeep.wav");
 		boolean x = false;
 		while(!x) {
 			System.out.println(System.currentTimeMillis()-start);
-			if((System.currentTimeMillis()-start) == 1000) {
+			if((System.currentTimeMillis()-start) == 2000) {
 				sound();
 				x = true;
 			}}}
 	public static void sound() {
 		try
 	    {
-	        File musicPath = new File("/Users/jayatigupta/Downloads/beepbeep.wav");
+	        File musicPath = new File("/Users/jayatigupta/Downloads/hello my name is Anuj.wav");
 	        if(musicPath.exists())
 	        {
 	        	AudioInputStream audioInput =  AudioSystem.getAudioInputStream(musicPath);
@@ -39,9 +38,6 @@ public class try1 {
 	        	clip.open(audioInput);
 	        	clip.start();
 	        	clip.loop(Clip.LOOP_CONTINUOUSLY);
-	        	
-	        	
-	        	
 	        	JOptionPane.showMessageDialog(null, "Press ok to stop playing");
 	        	clip.stop();
 	        }
