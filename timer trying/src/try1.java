@@ -19,18 +19,23 @@ public class try1 {
 		}}
 	
 	public static void timer() {
+		long ltime = 0; long ctime = 0;
 		long start = System.currentTimeMillis();
 		boolean x = false;
 		while(!x) {
-			System.out.println(System.currentTimeMillis()-start);
-			if((System.currentTimeMillis()-start) == 2000) {
+			ctime = (System.currentTimeMillis()- start)/1000;
+			if(ltime != ctime && ctime%5==0)
+				System.out.println(ctime);
+			ltime = (System.currentTimeMillis()- start)/1000;
+		
+			if((System.currentTimeMillis()-start) == 600000) {
 				sound();
 				x = true;
 			}}}
 	public static void sound() {
 		try
 	    {
-	        File musicPath = new File("/Users/jayatigupta/Downloads/hello my name is Anuj.wav");
+	        File musicPath = new File("/Users/jayatigupta/Downloads/favorite crime updated.wav");
 	        if(musicPath.exists())
 	        {
 	        	AudioInputStream audioInput =  AudioSystem.getAudioInputStream(musicPath);
